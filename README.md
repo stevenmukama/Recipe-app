@@ -86,7 +86,7 @@ In order to run this project you need:
 
 Clone this repository to your desired folder:
 
-`git clone git@https://github.com/stevenmukama/Recipe-app.git`
+`git clone git@github.com:stevenmukama/Recipe-app.git`
  `cd Recipe-app`
 
 ### Install
