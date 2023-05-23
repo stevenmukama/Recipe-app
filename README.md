@@ -2,8 +2,6 @@
 
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
-  <br/>
 
   <h3><b>Recipe app</b></h3>
 
@@ -118,7 +116,8 @@ To run tests, run the following command:
 👤 **Aubin Simpenze**
 
 - Github: [@githubhandle](https://github.com/aubinleyoung/)
-
+- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -127,7 +126,7 @@ To run tests, run the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/stevenmukama/Recipe-app/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -165,6 +164,6 @@ I would like to thank  Microverse for providing this project to work on.
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
