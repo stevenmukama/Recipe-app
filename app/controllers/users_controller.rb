@@ -8,7 +8,6 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
- 
     if params[:id] == 'sign_out'
       sign_out_and_redirect
     else

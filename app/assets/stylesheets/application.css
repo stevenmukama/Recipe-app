@@ -1,20 +1,21 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
-.main-section{
+
+.main-section {
   background-color: rgb(206, 173, 173);
   align-items: center;
   padding: 10px 10px;
   display: flex;
   flex-direction: column;
-  gap: .5vh;
-
+  gap: 0.5vh;
 }
-.recipe-block{
+
+.recipe-block {
   border: 1px solid black;
   display: flex;
   gap: 10vw;
-  padding: .5vw;
+  padding: 0.5vw;
   margin-bottom: 2vh;
 }
