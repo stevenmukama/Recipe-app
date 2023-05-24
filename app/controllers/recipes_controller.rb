@@ -3,14 +3,17 @@ class RecipesController < ApplicationController
 
   # GET /recipes or /recipes.json
   def index
-    @recipes = current_user.recipes
+    @recipes = Recipe.all
   end
 
   # GET /recipes/1 or /recipes/1.json
-  def show; end
+  def show
+    @recipe = Recipe.find(params[:id])
+  end
 
   # GET /recipes/new
   def new
+    redirect_to recipes_path, flash: { alert: 'Please sign up or login!' } unless current_user
     @recipe = Recipe.new
   end
 
