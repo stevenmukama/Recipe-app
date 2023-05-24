@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
+
   devise_for :users
-  
-  resources :users, only: [:index, :show]
+  resources :recipes do
+    resources :recipe_foods, only: [:create, :destroy]
+  end
+  resources :users
   devise_scope :user do
     authenticated :user do
-      root 'users#index', as: :authenticated_root
+      root 'recipes#index', as: :authenticated_root
     end
     unauthenticated do
-      root 'users#index', as: :unauthenticated_root
+      root 'recipes#index', as: :unauthenticated_root
     end
   end
 end

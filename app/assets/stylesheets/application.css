@@ -11,3 +11,10 @@
   gap: .5vh;
 
 }
+.recipe-block{
+  border: 1px solid black;
+  display: flex;
+  gap: 10vw;
+  padding: .5vw;
+  margin-bottom: 2vh;
+}
