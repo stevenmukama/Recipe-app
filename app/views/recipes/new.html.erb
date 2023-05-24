@@ -1,0 +1,34 @@
+
+<main class="main-section">
+
+  <h2 class='title'> Add Recipe</h2>
+  <%= form_with url: recipes_path, scope: :recipe do |form| %>
+    <div class="foods-new-div">
+    <%= form.label :Name, class:"form-label" %><br>
+    <%= form.text_field :name, class: 'form-control', require: true %>
+    </div>
+
+    <div class="foods-new-div">
+    <%= form.label :Preparation_Time, class:"form-label" %><br>
+    <%= form.text_field :preparation_time, class: 'form-control', require: true %>
+    </div>
+
+    <div class="foods-new-div">
+    <%= form.label :Cooking_Time, class:"form-label" %><br>
+    <%= form.text_field :cooking_time, class: 'form-control', require: true %>
+    </div>
+    
+    <div class="foods-new-div">
+    <%= form.label :Description, class:"form-label" %><br>
+    <%= form.text_area :description, class: 'form-control', require: true %>
+    </div>
+
+    <%= form.submit "Submit", class: "foods-new-btn" %>
+  <% end %>
+
+  
+  <div>
+    <%= link_to "Back to recipes", recipes_path %>
+  </div>
+
+</main>
