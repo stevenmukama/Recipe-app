@@ -1,6 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  list-style: unset;
+  text-decoration: none;
 }
 
 .main-section {
@@ -18,4 +20,24 @@
   gap: 10vw;
   padding: 0.5vw;
   margin-bottom: 2vh;
+}
+
+.recipe-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 3vw;
+  padding: 2vw;
+}
+
+.public-btn {
+  width: 3vh;
+  height: 3vh;
+  border-radius: 50%;
+}
+
+.public-btn-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.3vw;
 }

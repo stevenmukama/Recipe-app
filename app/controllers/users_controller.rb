@@ -17,6 +17,10 @@ class UsersController < ApplicationController
 
   private
 
+  def set_user
+    @user = User.find(params[:id])
+  end
+
   def sign_out_and_redirect
     sign_out current_user
     redirect_to new_user_session_path
