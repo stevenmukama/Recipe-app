@@ -10,6 +10,45 @@
   </head>
 
   <body>
+  
+  <nav class="navbar">
+  <div class="nav-container">
+    <div>
+      <% if user_signed_in? %>
+        <span class="fw-semibold">Welcome: <%= current_user.name %></span>  
+      <% else %>
+        <a href="/">
+    
+        </a>
+      <% end %>
+    </div>
+
+    <div class="nav-links">
+      <% if user_signed_in? %>
+       <span>Foods</span>
+        <%= link_to "Recipes", recipes_path, class: "navbar-brand" %>
+        <span>Public Recipes</span>
+        <span>Shopping Lists</span>
+        <div class="sign_out_btn">
+        <button>
+          <%= link_to 'Sign out',  destroy_user_session_path, method: :delete %>
+        </button>
+      </div>
+      <% else %>
+        <a class="navbar-brand" href="<% request.path %>/users/sign_up">
+          Sign up
+        </a>
+        <a class="navbar-brand fw-medium lh-sm fs-6" href="<% request.path %>/users/sign_in">
+          Login
+        </a>
+      <% end %>
+  
+    </div>
+  </div>
+</nav>
+
+
+
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
     <%= yield %>
