@@ -64,6 +64,7 @@
 - **A registration page**
 - **A food list**
 -  **A recipes list**
+-  **Create Recipes**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,8 +119,17 @@ To run tests, run the following command:
 - Github: [@githubhandle](https://github.com/aubinleyoung/)
 - Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+# 🔭 Future Features <a name="future-features"></a>
+
+
+- [ ] **[Create Inventory]**
+- [ ] **[Inventories list]**
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
