@@ -1,0 +1,11 @@
+<p class="notice"><%= notice %></p>
+<div class="button-container">
+  <%= link_to "Add food", new_food_path, class: "btn btn-primary add-food-button" %>
+</div>
+<div id="foods" class="food-container" >
+  <% @foods.each do |food| %>
+    <%= render food %>
+   
+    <%= button_to "Remove", food, method: :delete, class: "btn btn-danger" %>    
+  <% end %>
+</div>

@@ -1,0 +1,24 @@
+
+<div class="added_food_details_table_container">
+
+<table id="<%= dom_id food %>", class="added_food_details_table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Measurement Unit</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>User</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><%= food.name %></td>
+        <td><%= food.measurement_unit %></td>
+        <td>$<%= food.price %></td>
+        <td><%= food.quantity %></td>
+        <td><%= food.user_id %></td>
+      </tr>
+  </tbody>
+  </table>
+</div>

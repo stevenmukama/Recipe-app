@@ -25,10 +25,14 @@
 
     <div class="nav-links">
       <% if user_signed_in? %>
-       <span>Foods</span>
+      <%= link_to "Foods", foods_path, class: "navbar-brand" %>
         <%= link_to "Recipes", recipes_path, class: "navbar-brand" %>
-        <span>Public Recipes</span>
-        <span>Shopping Lists</span>
+        <a class="navbar-brand" href="/public_recipes">
+        public recipes
+      </a>
+      <a class="navbar-brand" href="/general_shopping_list">
+      general shopping list
+      </a>
         <div class="sign_out_btn">
         <button>
           <%= link_to 'Sign out',  destroy_user_session_path, method: :delete %>
