@@ -1,0 +1,30 @@
+<h1>Editing recipe food</h1>
+
+<%= form_with(model: @recipe_food, url: "/recipes/#{@recipe.id}/recipe_foods/#{@recipe_food.id}")  do |form| %>
+  <% if @recipe_food.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(recipe_food.errors.count, "error") %> prohibited this recipe_food from being saved:</h2>
+
+      <ul>
+        <% @recipe_food.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :quantity, style: "display: block" %>
+    <%= form.number_field :quantity %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<br>
+
+<div>
+  <a href=<%= "/recipes/#{@recipe.id}" %>>Back to recipe</a>
+</div>
