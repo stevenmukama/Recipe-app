@@ -51,6 +51,7 @@ class RecipesController < ApplicationController
 
   # DELETE /recipes/1 or /recipes/1.json
   def destroy
+    RecipeFood.where(recipe_id: params[:id]).destroy_all
     @recipe = Recipe.find(params[:id])
     @recipe.destroy!
     flash[:notice] = 'You have deleted the food!'

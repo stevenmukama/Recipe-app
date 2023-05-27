@@ -5,8 +5,7 @@
 <div id="foods" class="food-container" >
   <% @foods.each do |food| %>
     <%= render food %>
-    <p>
+   
     <%= button_to "Remove", food, method: :delete, class: "btn btn-danger" %>    
-    </p>
   <% end %>
 </div>
