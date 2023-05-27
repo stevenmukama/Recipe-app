@@ -76,7 +76,3 @@ end
 gem 'cancancan'
 gem 'devise'
 gem 'pg'
-
-
-
-
