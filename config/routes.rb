@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   # post "/recipe_foods", to: "recipe_foods#create"
   post "/recipe_foods/", to: "recipe_foods#create"
+  patch "/recipe_foods/", to: "recipe_foods#update"
   #resources :recipe_foods
   resources :foods
   get "general_shopping_list", to: "general_shopping_list#index"

@@ -60,7 +60,10 @@
           <td>$ <%= recipe_food.value %></td>
           <td>
           <div class="">
-b            <%= button_to "Remove", recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), class: "no-styling btn-text color-red", method: :delete %>
+          <div id='12'>
+          <a href= <%= "/recipes/#{@recipe.id}/recipe_foods/#{recipe_food.id}/edit" %>>edit</a>
+          </div>
+          <%= button_to "Remove", recipe_recipe_food_path(recipe_id: @recipe.id, id: recipe_food.id), class: "no-styling btn-text color-red", method: :delete %>
           </div>
           </td>
       </tr>
