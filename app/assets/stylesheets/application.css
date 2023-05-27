@@ -218,6 +218,42 @@ td {
 .shopping-list {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   gap: 1rem;
+}
+
+.public-recipes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.public-recipes-container {
+  border: 1px solid #000;
+  list-style: none;
+}
+
+.recipeselements {
+  display: flex;
+  gap: 1rem;
+  padding: 20px;
+}
+
+.publictable {
+  margin: 20px auto;
+}
+
+.addnewfoods {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.foodsubmittbutton {
+  margin-top: 20px;
 }
