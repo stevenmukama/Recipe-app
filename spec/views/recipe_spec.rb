@@ -1,39 +1,32 @@
 require 'rails_helper'
-RSpec.describe 'Food Index', type: :feature do
+RSpec.describe 'Recipes Index', type: :feature do
   before :each do
     user = User.create!(
       name: 'Tom',
       email: 'tom@example.com',
       password: '123456',
-      confirmed_at: Time.now
     )
 
     visit new_user_session_path
     fill_in 'Email', with: user.email
     fill_in 'Password', with: user.password
-    click_button 'Log in'
-    visit foods_path
+    click_button 'Sign in'
+    visit recipes_path
   end
 
-  describe 'index page for list foods' do
-    it 'shows name of food of the logged-in user.' do
-      expect(page).to have_content('Food')
+  describe 'index page for list of recipes' do
+    it 'shows  list of recipes.' do
+      expect(page).to have_content('Recipes')
     end
 
-    it 'shows the measurement unit column there' do
-      expect(page).to have_content('Measurement Unit')
+    it 'should be able to see delete button for each recipe' do
+      within('body') do
+        expect(find_all('button'))
+      end
     end
 
-    it 'shows the price column there' do
-      expect(page).to have_content('Price')
-    end
-
-    it 'shows the button add food' do
-      expect(page).to have_content('Foods')
-    end
-
-    it 'shows the actions column' do
-      expect(page).to have_content('Actions')
+    it 'shows the button to add recipies' do
+      expect(page).to have_content('New recipe')
     end
   end
 end
