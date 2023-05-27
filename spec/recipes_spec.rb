@@ -17,7 +17,6 @@ RSpec.describe Recipe, type: :model do
     expect(subject.description).to eql('Hot and delicious')
   end
 
-
   it 'should have public of true' do
     expect(subject.public).to eql(true)
   end
