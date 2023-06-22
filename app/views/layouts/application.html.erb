@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RecipeApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+  
+  <nav class="navbar">
+  <div class="nav-container">
+    <div>
+      <% if user_signed_in? %>
+        <span class="fw-semibold">Welcome: <%= current_user.name %></span>  
+      <% else %>
+        <a href="/">
+    
+        </a>
+      <% end %>
+    </div>
+
+    <div class="nav-links">
+      <% if user_signed_in? %>
+      <%= link_to "Foods", foods_path, class: "navbar-brand" %>
+        <%= link_to "Recipes", recipes_path, class: "navbar-brand" %>
+        <a class="navbar-brand" href="/public_recipes">
+        public recipes
+      </a>
+      <a class="navbar-brand" href="/general_shopping_list">
+      general shopping list
+      </a>
+        <div class="sign_out_btn">
+        <button>
+          <%= link_to 'Sign out',  destroy_user_session_path, method: :delete %>
+        </button>
+      </div>
+      <% else %>
+        <a class="navbar-brand" href="<% request.path %>/users/sign_up">
+          Sign up
+        </a>
+        <a class="navbar-brand fw-medium lh-sm fs-6" href="<% request.path %>/users/sign_in">
+          Login
+        </a>
+      <% end %>
+  
+    </div>
+  </div>
+</nav>
+
+
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+    <%= yield %>
+  </body>
+</html>
